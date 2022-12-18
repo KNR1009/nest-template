@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { PrismaService } from 'src/prisma/prisma.service';
 import { TasksService } from './tasks.service';
 
 describe('UserService', () => {
@@ -8,7 +7,7 @@ describe('UserService', () => {
   //テストを実行する前にテストで使用するデータを投入します。
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [TasksService, PrismaService],
+      providers: [TasksService],
     }).compile();
 
     taskService = module.get<TasksService>(TasksService);
