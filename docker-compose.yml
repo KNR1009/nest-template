@@ -10,7 +10,7 @@ services:
     container_name: postgres-dev
     # 環境変数を設定します。
     environment:
-      POSTGRES_USER: root
+      POSTGRES_USER: mydb-dev
       POSTGRES_PASSWORD: password
       POSTGRES_DB: mydb-dev
     # ポートの指定（HOST:CONTAINER）
@@ -22,7 +22,7 @@ services:
 
     container_name: postgres-test
     environment:
-      POSTGRES_USER: root
+      POSTGRES_USER: mydb-dev
       POSTGRES_PASSWORD: password
       POSTGRES_DB: mydb-test
     # 開発環境用の postgres-dev コンテナのポートと競合しないように HOST 側のポート番号を1減らしました
